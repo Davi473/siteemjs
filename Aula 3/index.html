@@ -1,0 +1,106 @@
+<html>
+    <script>
+        // array
+        letras = ["a", "b", "c", "d"]
+        // adiconar um elemento
+        letras.push("e") // adicionar elementos a lista
+        letras.push("f")
+        // tira elementos da lista
+        letras.pop()
+        console.log(letras)
+        console.log(letras.length) // mostra o tamanho da lista
+
+
+        function arredondar (valor) {
+            return Math.round(valor*100)/100
+        }
+    
+        function calcularJuros (valor) {
+            juros = arredondar(valor * 0.10)
+            return juros
+        }
+    
+        function calcularRendimentos (valor) {
+            rendimento = arredondar(valor * 0.005)
+            console.log(rendimento)
+            return rendimento
+        }
+    
+        function calcularSaldo (mes, saldoInicial, lançamentos) {
+            console.log(mes)
+            saldo = saldoInicial 
+            for (lançamento of lançamentos) {
+                if (lançamento.tipo === "receita") {
+                    saldo += lançamento.valor
+                } 
+                if (lançamento.tipo === "despesa") {
+                    saldo -= lançamento.valor
+                }
+            }
+            estaNegativo = saldo < 0
+            if (estaNegativo) {
+                juros = calcularJuros(saldo)
+                saldo = arredondar(saldo + juros)
+            } else {
+                rendimento = calcularRendimentos(saldo)
+                saldo = arredondar(saldo + rendimento)
+            }
+            return saldo
+        }
+        
+        saldoInicial = 0
+        lançamentosJaneiro = [
+            {categoria: "Salário", tipo: "receita", valor: 3000}, // Objeto (conjuto de chaves e valores)
+            {categoria: "Aluguel", tipo: "despesa", valor: 1000},
+            {categoria: "Conta de Luz", tipo: "despesa", valor: 200},
+            {categoria: "Conta de Água", tipo: "despesa", valor: 100},
+            {categoria: "Internet", tipo: "despesa", valor: 100},
+            {categoria: "Transporte", tipo: "despesa", valor: 300},
+            {categoria: "Lazer", tipo: "despesa", valor: 300},
+            {categoria: "Alimentação", tipo: "despesa", valor: 500},
+            {categoria: "Condomínio", tipo: "despesa", valor: 300},
+            {categoria: "Farmácia", tipo: "despesa", valor: 100}
+        ]
+        saldo1 = calcularSaldo("Janeiro", saldoInicial, lançamentosJaneiro)
+        console.log(saldo1)
+        lançamentosFevereiro = [
+            {categoria: "Salário", tipo: "receita", valor: 3000},
+            {categoria: "Aluguel", tipo: "despesa", valor: 1200},
+            {categoria: "Conta de Luz", tipo: "despesa", valor: 250},
+            {categoria: "Conta de Água", tipo: "despesa", valor: 100},
+            {categoria: "Internet", tipo: "despesa", valor: 100},
+            {categoria: "Transporte", tipo: "despesa", valor: 500},
+            {categoria: "Lazer", tipo: "despesa", valor: 0},
+            {categoria: "Alimentação", tipo: "despesa", valor: 1000},
+            {categoria: "Condomínio", tipo: "despesa", valor: 400},
+            {categoria: "Farmácia", tipo: "despesa", valor: 0}
+        ]
+        saldo2 = calcularSaldo("Fevereiro", saldo1, lançamentosFevereiro)
+        console.log(saldo2)
+        lançamentosMarço = [
+            {categoria: "Salário", tipo: "receita", valor: 4000},
+            {categoria: "Aluguel", tipo: "despesa", valor: 1200},
+            {categoria: "Conta de Luz", tipo: "despesa", valor: 200},
+            {categoria: "Conta de Água", tipo: "despesa", valor: 100},
+            {categoria: "Internet", tipo: "despesa", valor: 200},
+            {categoria: "Transporte", tipo: "despesa", valor: 500},
+            {categoria: "Lazer", tipo: "despesa", valor: 800},
+            {categoria: "Alimentação", tipo: "despesa", valor: 1000},
+            {categoria: "Condomínio", tipo: "despesa", valor: 400},
+            {categoria: "Farmácia", tipo: "despesa", valor: 0}
+        ]
+        saldo3 = calcularSaldo("Março", saldo2, lançamentosMarço)
+        console.log(saldo3)
+        acumuladoAno = saldo3
+        console.log("Ano")
+        console.log(acumuladoAno)
+
+        console.log("Quantidade de lançamento em janeiro", lançamentosJaneiro.length)
+        lançamentosJaneiro.pop() // tirando o ultimo elemento da lista
+        lançamentosJaneiro.pop()
+        lançamentosJaneiro.push = { categoria: "Financiamento", tipo: "despesa", valor: 200}
+        for (lançamento of lançamentosJaneiro) {
+            console.log(lançamento.categoria, lançamento.valor)
+        }
+    </script>
+</html>
