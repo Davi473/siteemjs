@@ -4,21 +4,27 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <form id="form1" name="form1" method="post">
-        <input type="text" name="name" id="name"> <!-- Nome -->
-        <input type="text" name="email" id="email"> <!-- Email -->
-        <br>
-        <input type="text" name="telefone" id="telefone"> <!-- Telefone -->
-        <input type="text" name="stats" id="stats"> <!-- Stats -->
-        <input type="submit" name="adicionar" id="submit">
-        </form>
-
-        <select name="pessoas" id="pessoas">
-            <option value="">Ligar</option>
-            <option value="">Ligar Mais Tarde</option>
-            <option value="">Não Ligar Mais</option>
-        </select>
+        <div>
+            <form id="form1" name="form1" method="post">
+            <!-- Nome -->
+            <input type="text" name="name" id="name" placeholder="Nome"> 
+            <!-- Email -->
+            <input type="text" name="email" id="email" placeholder="Email"> 
+            <br>
+            <!-- Telefone -->
+            <input type="text" name="telefone" id="telefone" placeholder="Telefone"> 
+            <!-- Stats -->
+            <select name="pessoas" id="pessoas">
+                <option value="">Ligar</option>
+                <option value="">Ligar Mais Tarde</option>
+                <option value="">Não Ligar Mais</option>
+            </select> 
+            <!-- Arquivo -->
+            <input type="submit" name="adicionar" id="submit" placeholder="Arquivo" >
+            </form>
+        </div>
     </body>
 </html>
