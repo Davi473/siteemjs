@@ -1,5 +1,6 @@
-function addElemento (parent, elementType, text) {
+function addElemento (parent, elementType, text, className) {
     const element = document.createElement(elementType);
+    element.className(className)
     if (text !== "" && text !== undefined && text !== null) {
         element.innerText = text;
     }
@@ -12,12 +13,13 @@ function renderizar () {
         app.firstChild.remove();
     }
     for (const valores of clientes) {
-        for (const valor of valores)
-            addElemento(app, "td", valor.cliente);
-            addElemento(app, "td", valor.email);
-            addElemento(app, "td", valor.telefone);
-            const td = document.createElement("td")
-            addElemento(td,"select")
+        addElemento(app, "td", valores.cliente, "cliente");
+        addElemento(app, "td", valores.email, "cliente");
+        addElemento(app, "td", valores.telefone, "cliente");
+        const td = document.createElement("td")
+        addElemento(td,"select")
+        const select = document.getElementsByClassName("select")
+        sele
     }
     app.appendChild(app);
 }
