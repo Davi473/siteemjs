@@ -12,12 +12,12 @@ function renderizar () {
         app.firstChild.remove();
     }
     for (const valores of clientes) {
-        addElemento(app, "td", valores.cliente);
-        addElemento(app, "td", valores.email);
-        addElemento(app, "td", valores.telefone);
-        const td = document.createElement("td")
-        addElemento(td,"select")
-        app.appendChild(td)
+        for (const valor of valores)
+            addElemento(app, "td", valor.cliente);
+            addElemento(app, "td", valor.email);
+            addElemento(app, "td", valor.telefone);
+            const td = document.createElement("td")
+            addElemento(td,"select")
     }
     app.appendChild(app);
 }
