@@ -13,8 +13,12 @@
                 margin-right: 30%;
             }
 
-            div {
-                border: 1 solid black;
+            .tabela-dos-clientes {
+                border: 1px solid black;
+            }
+
+            .tabela-geral {
+                border: 1px solid black;
             }
         </style>
     </head>
@@ -35,29 +39,20 @@
                 <tr>
                     <th>
                         <!-- Stats -->
-                        <select name="pessoas" id="pessoas">
+                        <select name="stats" id="stats">
                             <option>Novo</option>
                             <option>Ligar Mais Tarde</option>
                             <option>Não Ligar</option>
                         </select>
                         <!-- Arquivo -->
-                        <input type="submit" name="adicionar" id="submit" value="Adicionar">
+                        <button id="button" >Adicionar</button>
                     </th>
                 </tr>
             </table>
         </div>
         <br>
         <!-- Cliente ja registrado -->
-        <table border="1">
-            <tr>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Telefone</th>
-                <th>Stats</th>
-                <th>Ação</th> <!-- Alguma Ação Futura-->
-            </tr>
-            <tr id="comeco"></tr>
-        </table>
+        <div id="comeco"></div>
     </body>
     <script src="clientes.js"></script>
     <script src="main.js"></script>
