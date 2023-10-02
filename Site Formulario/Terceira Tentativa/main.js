@@ -60,6 +60,11 @@ function addSelect (parent, valores) {
     parent.appendChild(select)
 }
 
+// função do Button cabeçalho
+function buttonAdicinar (parent) {
+    const parent = document.
+}
+
 // função de test 
 function escrita () {
     console.log("oiee")
