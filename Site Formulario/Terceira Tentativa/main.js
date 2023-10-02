@@ -60,6 +60,7 @@ function addSelect (parent, valores) {
     parent.appendChild(select)
 }
 
+// função de test 
 function escrita () {
     console.log("oiee")
 }
