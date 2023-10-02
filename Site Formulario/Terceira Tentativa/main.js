@@ -108,7 +108,7 @@ function clientes () {
             button.type = "button"
             button.value = "Excluir"
             button.id = valorExcluir
-            button.onclic = valorExcluir
+            button.onclic = valorExcluir // A possibilidade de aqui dar erro
             button.className = "excluir"
             valorExcluir += 1
             tr.appendChild(button)
