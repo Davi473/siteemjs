@@ -108,7 +108,7 @@ function clientes () {
             button.type = "button"
             button.value = "Excluir"
             button.id = valorExcluir
-            //button.onclick()
+            button.onclic = valorExcluir
             button.className = "excluir"
             valorExcluir += 1
             tr.appendChild(button)
