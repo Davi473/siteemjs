@@ -1,4 +1,8 @@
 function addCliente () {
+    const nome = document.getElementById("Nome")
+    const email = document.getElementById("Email")
+    const telefone = documento.getElementById("Telefone")
+    const stats = document.getElementById("stats")
     
 }
 
@@ -31,16 +35,20 @@ function cabecalho () {
     cabecalhoTrSecundaria.appendChild(cabecalhoThSecundaria)
     // Select Options
     const cabecalhoSelect = document.createElement("select")
+    cabecalhoSelect.id = "stats"
     cabecalhoThSecundaria.appendChild(cabecalhoSelect)
     stats = ["Novo", "Ligar Mais Tarde", "Não Ligar Mais"]
     for (const stato of stats) {
-    const cabecalhoOption = document.createElement("option")
-    cabecalhoOption.innerText = stato
-    cabecalhoSelect.appendChild(cabecalhoOption)
+       const cabecalhoOption = document.createElement("option")
+       cabecalhoOption.innerText = stato
+       cabecalhoSelect.appendChild(cabecalhoOption)
     }
     // input Button Tr 2
     const cabecalhoButton = document.createElement("button")
     cabecalhoButton.innerText = "Adicionar"
+    cabecalhoButton.onclick = function() {
+         addCliente()
+    }
     cabecalhoThSecundaria.appendChild(cabecalhoButton)
     // Juntando tudo e colocando na div
     cabecalho.appendChild(cabecalhoTable)
