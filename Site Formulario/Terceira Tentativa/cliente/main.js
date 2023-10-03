@@ -3,7 +3,7 @@ function addCliente () {
     const email = document.getElementById("Email")
     const telefone = documento.getElementById("Telefone")
     const stats = document.getElementById("stats")
-    
+    crienteAdicionado 
 }
 
 function cabecalho () {
