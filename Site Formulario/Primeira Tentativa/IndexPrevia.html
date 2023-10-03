@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                position: absolute;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin-left: 30%;
+                margin-right: 30%;
+            }
+
+            div {
+                border: 1 solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <table>
+                <tr>
+                    <th>
+                        <!-- Nome -->
+                        <input type="text" name="name" id="name" placeholder="Nome">
+                        <!-- Email -->
+                        <input type="text" name="email" id="email" placeholder="Email">
+                        <!-- Telefone -->
+                        <input type="text" name="telefone" id="telefone" placeholder="Telefone">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <!-- Stats -->
+                        <select name="pessoas" id="pessoas">
+                            <option>Novo</option>
+                            <option>Ligar Mais Tarde</option>
+                            <option>Não Ligar</option>
+                        </select>
+                        <!-- Arquivo -->
+                        <input type="submit" name="adicionar" id="submit" value="Adicionar">
+                    </th>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <!-- Cliente ja registrado -->
+        <table border="1">
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th>Stats</th>
+                <th>Ação</th> <!-- Alguma Ação Futura-->
+            </tr>
+            <tr>
+                <td>Davi Marcos Dorn</td>
+                <td>Davi@Gmail.com</td>
+                <td>47 98###</td>
+                <td>
+                    <select name="" id="">
+                        <option value="">Novo</option>
+                        <option value="">Não Ligar</option>
+                        <option value="">Ligar Mais Tarde</option>
+                    </select>
+                </td>
+                <th><input type="button" value="Excluir"></th> <!-- Excluir o Cliente -->
+            </tr>
+        </table>
+    </body>
+
+</html>
