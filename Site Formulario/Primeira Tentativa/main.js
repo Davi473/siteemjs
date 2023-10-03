@@ -18,6 +18,10 @@ function addCliente () {
     clientesAdicionados.push(
         {cliente: nome.value, email: email.value, telefone: telefone.value, stats: stats.value}
     );
+    nome.value = "";
+    email.value = "";
+    telefone.value = "";
+    stats.value = "";
     document.getElementById("tabela").remove();
     clientes();
 }
