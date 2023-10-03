@@ -1,3 +1,7 @@
+function addCliente () {
+    
+}
+
 function cabecalho () {
     // chamando a div id="cabecalho"
     const cabecalho = document.getElementById("cabecalho")
